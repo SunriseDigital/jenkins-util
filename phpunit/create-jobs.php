@@ -43,10 +43,9 @@ EOF;
 
   private static $options;
 
-  private static $options_setting = "h:u:s:j:i:p:";
+  private static $options_setting = "u:s:j:i:p:";
 
   private static $default_options = array(
-    'h' => '~/.jenkins',
     'p' => 'phpunit'
   );
 
@@ -88,11 +87,6 @@ EOF;
   private static function getJobPrefix()
   {
     return self::getOption('p');
-  }
-
-  private static function getJenkinsHome()
-  {
-    return self::getOption('h');
   }
 
   private static function getJenkinsServer()
